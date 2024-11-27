@@ -76,8 +76,8 @@
         var { value: mypesan } = await swalo.fire({ title: "Send Message Here Pokkie!", input: "textarea", confirmButtonText:"Send" });
         if (mypesan) {
           await swalo.fire("Tell me your opinion about this kay!? ");
-          if (nomorWhatsapp.startsWith("6283120344291")) {
-            location.assign(`https://wa.me/${6283120344291}?text=${mypesan}`);
+          if (nomorWhatsapp.startsWith("62")) {
+            location.assign(`https://wa.me/${nomorWhatsapp}?text=${mypesan}`);
           } else {
             location.assign("https://wa.me/" + "?text=" + mypesan);
           }
@@ -86,6 +86,7 @@
           kirimPesan();
         }
       }
+
       DekaTutorial(konten, musik, nomorWhatsapp, kirimPesan, watermark);
     </script>
   </body>

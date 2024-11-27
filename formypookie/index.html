@@ -75,18 +75,6 @@
       async function kirimPesan() {
      location.assign("https://www.instagram.com/ryousaki.aki?igsh=cGd3Y21mczNuYTNy");
       }
-        var { value: mypesan } = await swalo.fire({ title: "Send Message Here Pokkie!", input: "textarea", confirmButtonText:"Send" });
-        if (mypesan) {
-          await swalo.fire("Tell me your opinion about this kay!? ");
-        }
-      {   
-      location.assign('https://www.instagram.com/ryousaki.aki?igsh=cGd3Y21mczNuYTNy)';
-   } else {
-          await swalo.fire({ confirmButtonText: "Okay", title: "You don't wanna try to type something T-T)? :)" });
-          kirimPesan();
-        }
-      }
-
       DekaTutorial(konten, musik, nomorWhatsapp, kirimPesan, watermark);
     </script>
   </body>

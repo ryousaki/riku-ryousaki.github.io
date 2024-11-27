@@ -68,13 +68,24 @@
       musik = "Musik.mp3";
 
       // Masukan nomor whatsapp diawali 62 (Opsional)
-      nomorWhatsapp = "07092027605";
+      nomorWhatsapp = "6283120344291";
 
       watermark = "Your Daddy Riku";
 
       async function kirimPesan() {
-     location.assign("https://www.instagram.com/ryousaki.aki?igsh=cGd3Y21mczNuYTNy);
+        var { value: mypesan } = await swalo.fire({ title: "Send Message Here Pokkie!", input: "textarea", confirmButtonText:"Send" });
+        if (mypesan) {
+          await swalo.fire("Tell me your opinion about this kay!? ");
+          if (nomorWhatsapp.startsWith("6283120344291")) {
+            location.assign(`https://wa.me/${6283120344291}?text=${mypesan}`);
+          } else {
+            location.assign("https://wa.me/" + "?text=" + mypesan);
+          }
+        } else {
+          await swalo.fire({ confirmButtonText: "Okay", title: "You don't wanna try to type something T-T)? :)" });
+          kirimPesan();
         }
+      }
       DekaTutorial(konten, musik, nomorWhatsapp, kirimPesan, watermark);
     </script>
   </body>
